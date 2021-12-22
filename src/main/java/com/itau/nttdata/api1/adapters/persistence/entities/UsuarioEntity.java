@@ -1,27 +1,27 @@
-package com.itau.nttdata.api1.adapters.dto;
+package com.itau.nttdata.api1.adapters.persistence.entities;
 
 import com.itau.nttdata.api1.application.domain.Enum.ETipoDeDocumento;
 import com.itau.nttdata.api1.application.domain.Enum.ETipoDeSolicitacao;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.persistence.*;
 
 @Data
-public class UsuarioDto {
+@Entity
+@Table(name = "usuario")
+@NoArgsConstructor
+@AllArgsConstructor
+public class UsuarioEntity {
 
-    @NotBlank
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
+
     private String nome;
-
-    @NotNull
     private ETipoDeDocumento tipoDeDocumento;
-
-    @NotBlank
     private String numeroDeDocumento;
-
-    @NotNull
     private ETipoDeSolicitacao tipoDeSolicitacao;
-
-    @NotBlank
     private String endereco;
 }
