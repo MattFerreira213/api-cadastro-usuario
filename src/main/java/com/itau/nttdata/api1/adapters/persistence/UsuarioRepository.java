@@ -7,8 +7,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class UsuarioRepository implements UsuarioRepositoryPort {
@@ -30,6 +32,13 @@ public class UsuarioRepository implements UsuarioRepositoryPort {
 
     @Override
     public List<Usuario> listAllUsers() {
+        List<UsuarioEntity> usuarioEntis = springUsuarioRepository.findAll();
+        List<Usuario> usuarios = new ArrayList(usuarioEntis);
+        return usuarios;
+    }
+
+    @Override
+    public Usuario listUserByNumeroDeDocumento(String numeroDeDocumento) {
         return null;
     }
 

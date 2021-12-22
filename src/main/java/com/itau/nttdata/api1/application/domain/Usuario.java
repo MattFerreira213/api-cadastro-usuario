@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Usuario {
 
-
     private Long Id;
     private String nome;
     private ETipoDeDocumento tipoDeDocumento;

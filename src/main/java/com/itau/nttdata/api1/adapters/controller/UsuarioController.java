@@ -7,12 +7,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/usuario")
@@ -26,6 +24,12 @@ public class UsuarioController {
         var usuario = new Usuario();
         BeanUtils.copyProperties(usuarioDto, usuario);
         return new ResponseEntity<>(usuarioServicePort.save(usuario), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/listar-todos")
+    public ResponseEntity<List<Usuario>> listarTodosOsUsuarios(){
+        var listUsuarios = usuarioServicePort.listAllUsers();
+        return ResponseEntity.ok(listUsuarios);
     }
 
 

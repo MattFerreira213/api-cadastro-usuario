@@ -32,10 +32,12 @@ public class UsuarioServiceImpl implements UsuarioServicePort {
         return usuarios;
     }
 
-//    @Override
-//    public Optional<Usuario> listUserByNumeroDeDocumento(String numeroDeDocumento) {
-//        return Optional.empty();
-//    }
+    @Override
+    public Usuario listUserByNumeroDeDocumento(String numeroDeDocumento) {
+        return null;
+    }
+
+
 //
 //    @Override
 //    public Usuario update(Usuario usuario) {
