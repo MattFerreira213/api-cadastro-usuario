@@ -1,5 +1,6 @@
 package com.itau.nttdata.api1.adapters.persistence;
 
+import com.itau.nttdata.api1.adapters.persistence.entities.SpringUsuarioRepository;
 import com.itau.nttdata.api1.adapters.persistence.entities.UsuarioEntity;
 import com.itau.nttdata.api1.application.domain.Usuario;
 import com.itau.nttdata.api1.application.ports.UsuarioRepositoryPort;
@@ -38,8 +39,9 @@ public class UsuarioRepository implements UsuarioRepositoryPort {
     }
 
     @Override
-    public Usuario listUserByNumeroDeDocumento(String numeroDeDocumento) {
-        return null;
+    public Usuario listUserByNumeroDeDocumento(String numeroDocumento){
+        var usuarioEnty = springUsuarioRepository.findByNumeroDocumento(numeroDocumento);
+        return modelMapper.map(usuarioEnty, Usuario.class);
     }
 
 

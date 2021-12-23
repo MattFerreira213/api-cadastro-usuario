@@ -9,6 +9,6 @@ public interface UsuarioServicePort {
 
     Usuario save(Usuario usuario);
     List<Usuario> listAllUsers();
-    Usuario listUserByNumeroDeDocumento(String numeroDeDocumento);
+    Usuario listUserByNumeroDeDocumento(String numeroDocumento);
 //    Usuario update(Usuario usuario, String numeroDeDocumento);
 }

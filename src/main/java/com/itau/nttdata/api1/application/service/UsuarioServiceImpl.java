@@ -5,7 +5,6 @@ import com.itau.nttdata.api1.application.ports.UsuarioRepositoryPort;
 import com.itau.nttdata.api1.application.ports.UsuarioServicePort;
 
 import java.util.List;
-import java.util.Optional;
 
 public class UsuarioServiceImpl implements UsuarioServicePort {
 
@@ -18,9 +17,9 @@ public class UsuarioServiceImpl implements UsuarioServicePort {
     @Override
     public Usuario save(Usuario usuario) {
         usuario.setNome(usuario.getNome());
-        usuario.setTipoDeDocumento(usuario.getTipoDeDocumento());
-        usuario.setNumeroDeDocumento(usuario.getNumeroDeDocumento());
-        usuario.setTipoDeSolicitacao(usuario.getTipoDeSolicitacao());
+        usuario.setTipoDocumento(usuario.getTipoDocumento());
+        usuario.setNumeroDocumento(usuario.getNumeroDocumento());
+        usuario.setTipoSolicitacao(usuario.getTipoSolicitacao());
         usuario.setEndereco(usuario.getEndereco());
 
         return usuarioRepositoryPort.save(usuario);
@@ -28,13 +27,14 @@ public class UsuarioServiceImpl implements UsuarioServicePort {
 
     @Override
     public List<Usuario> listAllUsers() {
-        List<Usuario> usuarios = usuarioRepositoryPort.listAllUsers();
+        var usuarios = usuarioRepositoryPort.listAllUsers();
         return usuarios;
     }
 
     @Override
-    public Usuario listUserByNumeroDeDocumento(String numeroDeDocumento) {
-        return null;
+    public Usuario listUserByNumeroDeDocumento(String numeroDocumento) {
+        var usuario = usuarioRepositoryPort.listUserByNumeroDeDocumento(numeroDocumento);
+        return usuario;
     }
 
 

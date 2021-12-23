@@ -20,8 +20,8 @@ public class UsuarioEntity {
     private Long Id;
 
     private String nome;
-    private ETipoDeDocumento tipoDeDocumento;
-    private String numeroDeDocumento;
-    private ETipoDeSolicitacao tipoDeSolicitacao;
+    private ETipoDeDocumento tipoDocumento;
+    private String numeroDocumento;
+    private ETipoDeSolicitacao tipoSolicitacao;
     private String endereco;
 }

@@ -14,13 +14,13 @@ public class UsuarioDto {
     private String nome;
 
     @NotNull
-    private ETipoDeDocumento tipoDeDocumento;
+    private ETipoDeDocumento tipoDocumento;
 
     @NotBlank
-    private String numeroDeDocumento;
+    private String numeroDocumento;
 
     @NotNull
-    private ETipoDeSolicitacao tipoDeSolicitacao;
+    private ETipoDeSolicitacao tipoSolicitacao;
 
     @NotBlank
     private String endereco;

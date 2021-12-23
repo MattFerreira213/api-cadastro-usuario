@@ -32,5 +32,11 @@ public class UsuarioController {
         return ResponseEntity.ok(listUsuarios);
     }
 
+    @GetMapping("/listar")
+    public ResponseEntity<Usuario> listarUsuario(@RequestParam String numeroDocumento){
+        var usuario = usuarioServicePort.listUserByNumeroDeDocumento(numeroDocumento);
+        return ResponseEntity.ok(usuario);
+    }
+
 
 }
