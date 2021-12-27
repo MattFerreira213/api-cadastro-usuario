@@ -38,5 +38,14 @@ public class UsuarioController {
         return ResponseEntity.ok(usuario);
     }
 
+    @PatchMapping("/atualizar")
+    public ResponseEntity<Usuario> atualizarUsuaraio(@RequestBody @Valid UsuarioDto usuarioDto,
+                                                     @RequestParam(name = "numeroDocumento") String numeroDocumento){
+        var user = new Usuario();
+        BeanUtils.copyProperties(usuarioDto, user);
+        var usuario = usuarioServicePort.update(user, numeroDocumento);
+        return ResponseEntity.ok(usuario);
+    }
+
 
 }

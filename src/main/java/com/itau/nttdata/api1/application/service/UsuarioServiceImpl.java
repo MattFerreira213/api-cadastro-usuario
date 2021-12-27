@@ -37,10 +37,10 @@ public class UsuarioServiceImpl implements UsuarioServicePort {
         return usuario;
     }
 
+    @Override
+    public Usuario update(Usuario usuario, String numeroDocumento) {
+        var usuarioAtualizado = usuarioRepositoryPort.update(usuario, numeroDocumento);
+        return usuarioAtualizado;
+    }
 
-//
-//    @Override
-//    public Usuario update(Usuario usuario) {
-//        return null;
-//    }
 }
