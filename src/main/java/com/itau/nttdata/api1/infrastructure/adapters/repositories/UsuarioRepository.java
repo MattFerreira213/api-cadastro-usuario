@@ -1,9 +1,9 @@
-package com.itau.nttdata.api1.adapters.persistence;
+package com.itau.nttdata.api1.infrastructure.adapters.repositories;
 
 
-import com.itau.nttdata.api1.adapters.persistence.entities.UsuarioEntity;
-import com.itau.nttdata.api1.application.domain.Usuario;
-import com.itau.nttdata.api1.application.ports.UsuarioRepositoryPort;
+import com.itau.nttdata.api1.infrastructure.adapters.entities.UsuarioEntity;
+import com.itau.nttdata.api1.domain.Usuario;
+import com.itau.nttdata.api1.domain.ports.UsuarioRepositoryPort;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.itau.nttdata.api1.application.ports;
+package com.itau.nttdata.api1.domain.ports;
 
-import com.itau.nttdata.api1.application.domain.Usuario;
+import com.itau.nttdata.api1.domain.Usuario;
 
 import java.util.List;
 

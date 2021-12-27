@@ -1,4 +1,4 @@
-package com.itau.nttdata.api1.application.domain.Enum;
+package com.itau.nttdata.api1.domain.Enum;
 
 public enum ETipoDeDocumento {
     RG,

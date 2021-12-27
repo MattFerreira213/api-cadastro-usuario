@@ -1,7 +1,7 @@
-package com.itau.nttdata.api1.adapters.persistence.entities;
+package com.itau.nttdata.api1.infrastructure.adapters.entities;
 
-import com.itau.nttdata.api1.application.domain.Enum.ETipoDeDocumento;
-import com.itau.nttdata.api1.application.domain.Enum.ETipoDeSolicitacao;
+import com.itau.nttdata.api1.domain.Enum.ETipoDeDocumento;
+import com.itau.nttdata.api1.domain.Enum.ETipoDeSolicitacao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

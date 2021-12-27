@@ -1,8 +1,8 @@
-package com.itau.nttdata.api1.adapters.controller;
+package com.itau.nttdata.api1.application.adapters.controller;
 
-import com.itau.nttdata.api1.adapters.dto.UsuarioDto;
-import com.itau.nttdata.api1.application.domain.Usuario;
-import com.itau.nttdata.api1.application.ports.UsuarioServicePort;
+import com.itau.nttdata.api1.domain.dto.UsuarioDto;
+import com.itau.nttdata.api1.domain.Usuario;
+import com.itau.nttdata.api1.domain.ports.UsuarioServicePort;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

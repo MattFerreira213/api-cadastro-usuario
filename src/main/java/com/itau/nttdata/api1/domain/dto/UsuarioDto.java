@@ -1,7 +1,7 @@
-package com.itau.nttdata.api1.adapters.dto;
+package com.itau.nttdata.api1.domain.dto;
 
-import com.itau.nttdata.api1.application.domain.Enum.ETipoDeDocumento;
-import com.itau.nttdata.api1.application.domain.Enum.ETipoDeSolicitacao;
+import com.itau.nttdata.api1.domain.Enum.ETipoDeDocumento;
+import com.itau.nttdata.api1.domain.Enum.ETipoDeSolicitacao;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

@@ -1,7 +1,7 @@
-package com.itau.nttdata.api1.adapters.configuration;
+package com.itau.nttdata.api1.infrastructure.configuration;
 
-import com.itau.nttdata.api1.application.ports.UsuarioRepositoryPort;
-import com.itau.nttdata.api1.application.service.UsuarioServiceImpl;
+import com.itau.nttdata.api1.domain.ports.UsuarioRepositoryPort;
+import com.itau.nttdata.api1.domain.service.UsuarioServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

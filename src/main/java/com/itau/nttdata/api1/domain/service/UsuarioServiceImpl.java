@@ -1,8 +1,8 @@
-package com.itau.nttdata.api1.application.service;
+package com.itau.nttdata.api1.domain.service;
 
-import com.itau.nttdata.api1.application.domain.Usuario;
-import com.itau.nttdata.api1.application.ports.UsuarioRepositoryPort;
-import com.itau.nttdata.api1.application.ports.UsuarioServicePort;
+import com.itau.nttdata.api1.domain.Usuario;
+import com.itau.nttdata.api1.domain.ports.UsuarioRepositoryPort;
+import com.itau.nttdata.api1.domain.ports.UsuarioServicePort;
 
 import java.util.List;
 
